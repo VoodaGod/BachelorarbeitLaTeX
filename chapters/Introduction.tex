@@ -1,7 +1,7 @@
 % !TeX root = ../main.tex
 
 \chapter{Introduction}\label{chapter:Introduction}
-
+                
 This chapter introduces the motivation behind this thesis, as well as giving an overview of existing work related to its topic.
 
 
@@ -9,14 +9,7 @@ This chapter introduces the motivation behind this thesis, as well as giving an 
 
 Ever since the dawn of video games, the focus has been largely on making virtual worlds look as real as possible. Advances in \gls{cga} techniques as well as continuously increasing processing power have allowed even real time \gls{cga} to become almost photo-realistic \autocite{photorealismRealtime}.
 \newline
-An example for this evolution in graphical fidelity is the comparison of \textit{id Software}'s \textit{Doom} video games from 1993 and 2016 in \autoref{fig:doom1993vs2016}. The basic way the game is played has stayed largely the same: Buttons on the keyboard trigger actions displayed on the screen, which acts as a window into the virtual world. The largest difference is the drastically more believable presentation of the game world.
-\newline
-The rise of high quality \gls{vra} however has allowed users to not only look into a virtual world, but to see it as if they were actually part of it. There are various factors which influence how effective the illusion of being part of a virtual environment is, however this thesis will focus on one, which is giving the user a fully animated body, as ''a virtual body in the context of a head-mounted dis-play based virtual reality is a critical contributor to the sense of being in the virtual location'' \autocite[p.~374]{senseEmbodimentVR}
-\newline
-A problem that arises when giving the user a body is that the virtual world can influence the virtual body, that is to say exert forces on it, but not on the real body of the user. This can result in situations where the real and virtual body are mismatched, due to, for example, the tracked position of a real hand being inside a virtual object, such as a wall.
-\todo {rubber hand easy fool blabla \autocite{rubberHandsFeel}}
-
-
+An example for this evolution in graphical fidelity is the comparison of \textit{id Software}'s \textit{Doom} video games from 1993 and 2016 in \autoref{fig:doom1993vs2016}. The basic way the game is played has stayed largely the same: Buttons on the keyboard trigger actions displayed on the screen, which acts as a window into the virtual world. The largest difference is the drastically more believable presentation of the game world, which is a comparatively easily quantifiable improvement of player \gls{immersiongl} \autocite{gameImmersion}, however this thesis will explore a different avenue to increased immersion.
 
 \begin{figure}[!tbp]
   \centering
@@ -27,5 +20,29 @@ A problem that arises when giving the user a body is that the virtual world can 
   \label{fig:doom1993vs2016}
 \end{figure}
 
+The rise of high quality \gls{vra} has allowed users to not only look into a virtual world, but to see it as if they were actually part of it. There are various factors which influence how effective the illusion of being part of a virtual environment is, however this thesis will focus on one, which is giving the user a fully animated body, as \enquote{a virtual body in the context of a head-mounted display based virtual reality is a critical contributor to the sense of being in the virtual location} \autocite[p.~374]{senseEmbodimentVR}. This is commonly referred to as virtual embodiment, of which a more in depth discussion will follow in \autoref{chapter:VirtualEmbodiment}.
+\newline
+
+A problem that arises when giving the user a body is that the virtual world can influence the virtual body, that is to say exert forces on it, but not on the real body of the user. This can result in situations where the real and virtual body are mismatched due to, for example, the tracked position of a real hand being inside a virtual object, such as a wall, and the virtual hand not following into the object, as it is simulated physically so that it can be used for physics based interaction.
+\newline
+One effect of such discrepancies being handled inadequately, is giving the user motion sickness. According to James Lackner, \enquote{The sensory conflict theory of motion sickness proposed by Reason \textelp{} is the most widely accepted theory of motion sickness} \autocite[p. ~11 in pdf]{motionSickness}, which states that a discrepancy between visually perceived motion and bodily felt motion is the main cause of motion sickness. 
+\newline
+Another problem that arises when not handling such discrepancies is that it allows the user to, for example, stick his head through a wall, and thus be able to see parts of the environment he shouldn't be able to, or even walk through obstacles to interact with objects he isn't meant to be able to access. From the environment designers point of view, this is problematic due to not being able to fully control where the player can be at any time. From the user's perspective, these abilities, depending on the context, can break his \gls{immersiongl}, due to his ability to do impossible things. 
+\newline
+Assuming, that the user's virtual limbs won't follow his tracked, real limbs into (in the virtual world) impossible states, one could assume that it would be simple for the user to correct his pose. However the Rubber Hand Illusion experiment\footnote{In experiments, stimulating a test subject's hidden hand as well as a rubber hand placed in view before them simultaneously in the same manner, caused the test subject to mislocate his real, hidden hand} shows that the human body is not very good at locating unseen parts of itself \autocite{rubberHandsFeel}, so we cannot rely on the user's sense of \gls{kinesthesiagl} to tell him where his real body parts are.
+\newline
+
+In an effort to mitigate these problems, methods of alerting the user to discrepancies between his real and virtual body allowing him to easily adjust his pose to match that of his virtual body, especially with respect to his feet, will be investigated. 
+
+
 
 \section{Related Work}
+
+In his thesis \textit{Virtual Embodiment:  Dealing with Discrepancies between the
+Virtual and the Real Body} \autocite{JohnnyVEThesis} Jonathan Haudenschild proposed and implemented various feedback mechanisms to deal with such discrepancies. He focused on ideas that relied only on the basic \textit{HTC Vive} hardware, namely the two \glspl{controllergl} and the \gls{hmda}. His work formed the basis of this thesis, with the addition of a fully tracked body, utilising some new hardware discussed in \autoref{chapter:Hardware}, shifting the focus from discrepancies only at hands and head to also include the user's tracked feet, as well as implementing all feedback mechanisms into a virtual reality client for the textit{Neurorobotics Platform}, which will be presented in \autoref{chapter:Software}. 
+\newline
+
+Polona Caserman et al. \autocite{bodyTrackingVR} evaluated currently used methods of full body tracking in \gls{vra} for ease of use, cost and latency, namely \textit{Microsoft Kinect}\footnote{Microsoft Kinect: https://developer.microsoft.com/en-us/windows/kinect}, multiple cameras with a motion capture suit, and \glspl{imua} attached to limbs.
+\newline
+They found that \enquote{the Kinect suffers from occlusion, provides
+noise in skeleton tracking and has a high latency} \autocite[p. ~3]{bodyTrackingVR} but is used in many applications for which it provides adequate accuracy due to its low cost and ease of use. On the other hand, \enquote{a wearable motion capture suit is capable of a very accurate body tracking. However, it is very expensive and complicated to use} and as such \enquote{not applicable for home-based usage}  \autocite[p. ~3]{bodyTrackingVR}. 
