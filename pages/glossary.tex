@@ -8,6 +8,12 @@
 
 \newacronym{imua}{IMU}{inertial measurment unit}
 
+\newacronym{ika}{IK}{\gls{ikgl}}
+
+\newacronym{emsa}{EMS}{electrical muscle stimulation}
+
+\newacronym{pha}{PH}{passive haptics}
+
 
 \newglossaryentry{immersiongl}
 {
@@ -25,8 +31,14 @@
 {
     name = controller,
     description = {in the context of \gls{vra} and gaming refers to the input device}
-    plural = controllers
 }
+
+\newglossaryentry{ikgl}
+{
+    name = {inverse kinematics},
+    description = {Inverse kinematics (IK) makes it possible, just from knowing the target position of, for example, a hand attached to an arm with multiple joints, to calculate the required joint angles to place the hand at its target position. This is used in 3D animation to create realistic movement of game characters \autocite[p. ~3f]{bodyTrackingVR}}
+}
+
 
 %TODO remove v
 \newacronym[shortplural={D$_{\text{dye}}$}, longplural={donor dye, ex. Alexa 488}]{ddye}{D$_{\text{dye}}$}{donor dye, ex. Alexa 488}
