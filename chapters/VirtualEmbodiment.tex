@@ -1,3 +1,43 @@
 % !TeX root = ../main.tex
 
 \chapter{Virtual Embodiment}\label{chapter:VirtualEmbodiment}
+
+The term \textit{embodiment} has been used in many different contexts, so that its meaning largely is dependent on the point of view from which approaching the issue. 
+\newline
+In their paper \textit{The Sense of Embodiment in Virtual Reality} \autocite{senseEmbodimentVR} Kilteni, Groten and Slater identified multiple differing definitions of \textit{embodiment}.
+In philosophical terms, it refers to \enquote{how one defines and experiences one’s self} \autocite[p. ~2]{senseEmbodimentVR}. In psychology and cognitive neuroscience it refers to the way the body is represented in the brain, ass well as how certain neurological conditions may alter this representation. In robotics, \textit{embodiment} distinguishes how forms of artificial intelligence are represented, to contrast \enquote{virtual agents and robots that have a real physical representation compared to those that do not} \autocite[p. ~2]{senseEmbodimentVR}, meaning agents which are \textit{embodied} or not. It has also been used in the context of users' presence in virtual environments, where giving the user a virtual body in \gls{hmda} based \gls{vra} was identified to be \enquote{a critical contributor to the
+sense of being in the virtual location} \autocite[p. ~2]{senseEmbodimentVR}.
+\newline
+In this thesis, following Haudenschild \autocite{JohnnyVEThesis}, the term \textit{\gls{soea}} will be used to evaluate the various feedback mechanisms which will be implemented. Kilteni et al. use the following definition of \textit{\gls{soea}} \autocite[p. ~2-3]{senseEmbodimentVR}:
+\begin{quote}
+    SoE toward a body B is the sense that emerges when B’s properties are processed as if they were the properties of one’s own biological body.
+\end{quote}
+\Gls{soea} is described as having three components:
+\begin{itemize}
+    \item Sense of self-location
+    \item Sense of of agency
+    \item Sense of body ownership
+\end{itemize}
+
+The sense of self-location refers to one's spatial experience of being inside a body. In contrast to this, presence refers to the sensation of being in an environment. An illustration of this distinction is the fact that one can feel present in an environment, such as a room, without having a body, but will not feel self-located. 
+\newline
+One large factor of one's sense of self-location is visuospatial perspective, which is normally egocentric. Studies have shown \enquote{that physiological responses to a threat given to an artificial body were greater for first-person perspective than for third-person perspective} \autocite[p. ~4]{senseEmbodimentVR}. This implies that an egocentric first-person perspective increases one's feeling of being in a body.
+\newline
+Another factor are matching vestibular signals between virtual and real body, meaning that the virtual body should be in a similar pose to the real body, as well as have a similar orientation in respect to gravity \autocite{senseEmbodimentVR}. Trying to self-locate while standing, for example, in a body lying horizontally with it's face to the ground, will be less effective than in a body standing upright and facing the same direction as the real body.
+\newline
+Another study \enquote{revealed that the position of seen tactile stimulation when accompanied by congruent physical stimulation can dominate the visual perspective and thus determine our self-location} \autocite[p. ~4]{senseEmbodimentVR}.
+\newline
+
+The sense of agency refers to the sense of having \enquote{global motor control, including the subjective experience of action, control, intention, motor selection and the conscious experience of will} [(Blanke \& Metzinger, 2009, p. 7) as cited in \autocite[p. ~4]{senseEmbodimentVR}]. It is a result of predicted consequences of an action done with the real body matching the perceived results of this action on the virtual body. A simple example is doing an action for which one expects one's arm to move up, and seeing the virtual arm move up in sync with this action, which leads to a feeling of being the agent of this action. It was found in a study that a latency of more than 150 ms between action and perceived action lead to reduced agency \autocite[p. ~5]{senseEmbodimentVR}.
+\newline
+
+The sense of body ownership \enquote{refers to one’s self-attribution of a body}, \enquote{has a possessive character}, and \enquote{implies that the body is the source of the experienced sensations} \autocite[p. ~5]{senseEmbodimentVR}.
+\newline
+Early research showed that visual, tactile and kinesthetic stimuli should be in sync between the real and artificial body part, as well as the artificial body part having a sufficient degree of morphological similarity to one's real body part, in order to feel ownership of the artificial body part \autocite{senseEmbodimentVR}. In newer research however, it has also been shown that \enquote{body ownership is not exclusive to artificial body parts but can also be felt for artificial whole bodies; for example, avatars or mannequins} \autocite[p. ~5]{senseEmbodimentVR}.
+\newline
+
+The degree to which one experiences \gls{soea} towards a body is defined as minimal, when at least one of either the sense of self-location, agency or ownership is felt at least in minimal intensity. Full \gls{soea} is only experienced, when all three senses are felt at maximum intensity \autocite{senseEmbodimentVR}. It is assumed that directing full \gls{soea} towards a body which is not one's own is not possible with current technology, however this structure allows developing and evaluating new solutions in order to increase \gls{soea} in \gls{vra} applications.
+\newline
+
+The distinction between \textit{\gls{soea}} and \textit{embodiment} is given by Vignemont as follows: \enquote{Embodiment corresponds to a specific type of information processing, whereas the sense of embodiment corresponds to the associated phenomenology, which includes feelings of body ownership} \autocite[p. ~3]{embodimentOwnership}.
+The goal of this thesis is to find ways of increasing \gls{soea} for users in an application which \textit{embodies} artificialy intelligent actors and real humans in a virtual environment, which will be explained in detail in \autoref{chapter:Software}.
