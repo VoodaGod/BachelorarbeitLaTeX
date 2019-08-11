@@ -1,3 +1,12 @@
 % !TeX root = ../main.tex
 
 \chapter{Proposed Work}\label{chapter:ProposedWork}
+
+In the course of this thesis, feedback mechanisms to alert the user of discrepancies between his tracked body, the 
+\textit{local} avatar, and his physically simulated body, the \textit{remote} avatar, will be implemented into the \textit{Neurorobotics Unity3D Client} (see \autoref{section:NeuroroboticsUnity3DClient}). The aim is to encourage the user to prevent, and resolve, such discrepancies, to increase his \gls{soea} (see \autoref{chapter:VirtualEmbodiment}).
+\newline
+Although the focus of this thesis is on the addition of feet, feedback mechanisms for hands and head will also be implemented. These mechanisms will be discussed further in \autoref{chapter:Implementation}, and will include visual, auditory and haptic feedback.
+\newline
+Due to the \textit{Neurorobotics Unity3D Client} already having a seperate local and remote avatar implemented, the \textit{simulated surface constraints technique} mentioned in \autoref{section:YouShallNotPass} is already present. The user can place his hand inside an object, but the remote, physically simulated avatar's hand will not follow into the object.
+\newline
+This will be used as the baseline experience to which the newly added feedback mechanisms will be compared in a user study and evaluation, discussed in \autoref{chapter:Evaluation}.

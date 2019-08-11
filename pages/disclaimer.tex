@@ -5,12 +5,13 @@
 \noindent
 \makeatletter
 \ifthenelse{\pdf@strcmp{\languagename}{english}=0}
-{I confirm that this \MakeLowercase{\getDoctype{}} is my own work and I have documented all sources and material used.}
+{I confirm that this \getDoctype{}   is my own work and I have documented all sources and material used.}
 {Ich versichere, dass ich diese \getDoctype{} selbstständig verfasst und nur die angegebenen Quellen und Hilfsmittel verwendet habe.}
 \makeatother
 
 \vspace{15mm}
 \noindent
-\getSubmissionLocation{}, \getSubmissionDate{} \hspace{50mm} \getAuthor{}
+%\getSubmissionLocation{}, \getSubmissionDate{} \hspace{50mm} \getAuthor{}
+\getSubmissionLocation{}, \hspace{20mm} \hspace{50mm} \getAuthor{}
 
 \cleardoublepage{}
