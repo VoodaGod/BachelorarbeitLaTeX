@@ -1,4 +1,4 @@
-Source of my Bachelor's Thesis "Virtual Embodiment of Human Feet in the Neurorobotics Platform".
+Source of my Bachelor's Thesis "Virtual Embodiment of Human Feet in the Neurorobotics Platform".  
 PDF: https://github.com/VoodaGod/Bachelorarbeit/blob/master/Thesis_VirtualEmbodimentOfHumanFeetInTheNeuroroboticsPlatform.pdf
 
 Only used in Overleaf.
